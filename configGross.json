@@ -1,0 +1,11 @@
+{
+    "/api": {
+
+
+        "target": "https://covid19.mathdro.id",
+        "secure": false,
+        "changeOrigin": true
+    }
+
+
+}

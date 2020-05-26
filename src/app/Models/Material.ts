@@ -1,12 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './Components/navbar/navbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {NgModule} from '@angular/core';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -55,24 +48,15 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-import { ContainerComponent } from './Components/container/container.component';
-import { HttpClientModule } from '@angular/common/http';
 
+/**
+ * NgModule that includes all Material modules.
+*/
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    ContainerComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    MatSliderModule,
+  exports: [
+    // CDK
     A11yModule,
     BidiModule,
-    HttpClientModule,
     ObserversModule,
     OverlayModule,
     PlatformModule,
@@ -118,9 +102,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class MaterialModule {
+
+
+}
